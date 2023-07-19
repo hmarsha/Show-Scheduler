@@ -3,3 +3,6 @@ from bs4 import BeautifulSoup
 url = 'https://myanimelist.net/anime/seasons'
 html = requests.get(url)
 s = BeautifulSoup(html.content, 'html.parser')
+results=s.find(id='myanimelist')
+shows=results.findall(div,class_= 'wrapper stacks-challenge-2023-july js-color-pc-constant')
+
