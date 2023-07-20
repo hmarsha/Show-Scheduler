@@ -7,3 +7,10 @@ results=soup.find(id='myanimelist')
 shows=results.find_all('div',class_= 'wrapper stacks-challenge-2023-july js-color-pc-constant')
 for shows in results
   print(results, end='\n'*2)
+
+import os
+
+def draw_chart(title, date, stream_service, output_path):
+
+    chart_path = os.path.join(output_path, "{}_{}_courses_collisions.tex"
+                                            .format(title, date))
