@@ -14,3 +14,6 @@ def draw_chart(title, date, stream_service, output_path):
 
     chart_path = os.path.join(output_path, "{}_{}_courses_collisions.tex"
                                             .format(title, date))
+                                            
+    width = 277/(len(courses)+1)
+    height = 180/(len(courses)+1)
