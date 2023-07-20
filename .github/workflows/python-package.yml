@@ -5,4 +5,4 @@ html = requests.get(url)
 s = BeautifulSoup(html.content, 'html.parser')
 results=s.find(id='myanimelist')
 shows=results.findall(div,class_= 'wrapper stacks-challenge-2023-july js-color-pc-constant')
-
+print(shows_1[0].text)
