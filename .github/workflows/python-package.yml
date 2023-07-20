@@ -8,6 +8,17 @@ shows=results.find_all('div',class_= 'wrapper stacks-challenge-2023-july js-colo
 for shows in results
   print(results, end='\n'*2)
   
+  title_element = results.find("h3", class_="h3_anime_title")
+print(title_element)
+
+results=soup.find(id='myanimelist')
+shows=results.find_all('div',class_= 'info')
+for results in shows:
+  print(results, end='\n'*2)
+
+info_element = results.find("div", class_="info")
+print(info_element)
+  
 import os
 
 def draw_chart(title, date, stream_service, output_path):
