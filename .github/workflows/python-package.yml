@@ -2,7 +2,8 @@ import requests as rq
 from bs4 import BeautifulSoup
 url = 'https://myanimelist.net/anime/seasons'
 html = requests.get(url)
-s = BeautifulSoup(html.content, 'html.parser')
-results=s.find(id='myanimelist')
-shows=results.findall(div,class_= 'wrapper stacks-challenge-2023-july js-color-pc-constant')
-print(shows_1[0].text)
+soup = BeautifulSoup(html.content, 'html.parser')
+results=soup.find(id='myanimelist')
+shows=results.find_all('div',class_= 'wrapper stacks-challenge-2023-july js-color-pc-constant')
+for shows in results
+  print(results, end='\n'*2)
