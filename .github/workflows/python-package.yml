@@ -18,6 +18,7 @@ for results in shows:
 
 info_element = results.find("div", class_="info")
 print(info_element)
+
   
 import os
 
